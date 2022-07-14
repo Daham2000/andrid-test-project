@@ -17,4 +17,7 @@
     <string name="enter_course_name">Enter Course Name</string>
     <string name="add_student">Add Student</string>
     <string name="send">Send</string>
+    <string name="students">students</string>
+    <string name="id">id</string>
+    <string name="stuName">name</string>
 </resources>

@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.john_keels_it_project.R;
 import com.example.john_keels_it_project.model.StudentModel;
 
 import java.util.ArrayList;
@@ -18,11 +19,11 @@ public class DBHandler extends SQLiteOpenHelper {
 
     private static final int DB_VERSION = 1;
 
-    private static final String TABLE_NAME = "students";
+    private static final String TABLE_NAME = String.valueOf(R.string.students);
 
-    private static final String StuId = "id";
+    private static final String StuId = String.valueOf(R.string.id);
 
-    private static final String StuName = "name";
+    private static final String StuName = String.valueOf(R.string.stuName);
 
     private static final String StuAge = "age";
 

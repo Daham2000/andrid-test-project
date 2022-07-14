@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.john_keels_it_project.R;
 import com.example.john_keels_it_project.adapter.StudentAdapter;
 import com.example.john_keels_it_project.api.local.DBHandler;
+import com.example.john_keels_it_project.controller.StudentCtrl;
 import com.example.john_keels_it_project.model.StudentModel;
 
 import java.util.ArrayList;
@@ -59,7 +61,12 @@ public class StudentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         dbHandler = new DBHandler(getContext());
+        StudentCtrl studentCtrl = StudentCtrl.getInstance();
         rootView = inflater.inflate(R.layout.fragment_student, container, false);
+        Button sendDataBtn = rootView.findViewById(R.id.idStuSendBtn);
+        sendDataBtn.setOnClickListener(v -> {
+            studentCtrl.addAllStudent(students);
+        });
         return rootView;
     }
 

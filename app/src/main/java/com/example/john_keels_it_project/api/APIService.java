@@ -14,4 +14,7 @@ public interface APIService {
 
     @POST("student/")
     Call<StudentModel> addStudent(StudentModel studentModel);
+
+    @POST("student/all/")
+    Call<StudentModel> addStudentList(List<StudentModel> studentModel);
 }
