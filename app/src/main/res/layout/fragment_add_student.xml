@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.AddStudentFragment">
+    tools:context=".views.fragments.AddStudentFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,35 +15,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Enter Student ID" />
+            android:hint="@string/enter_student_id"
+            android:autofillHints=""
+            tools:ignore="TextFields" />
 
         <EditText
             android:id="@+id/stuName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Enter Student Name" />
+            android:hint="@string/enter_student_name"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/stuAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Enter Student Age" />
+            android:hint="@string/enter_student_age" />
 
         <EditText
             android:id="@+id/courseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Enter Course Name" />
+            android:hint="@string/enter_course_name" />
 
         <Button
             android:id="@+id/idStuAddBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Add Student"
+            android:text="@string/add_student"
             android:textAllCaps="false" />
 
     </LinearLayout>

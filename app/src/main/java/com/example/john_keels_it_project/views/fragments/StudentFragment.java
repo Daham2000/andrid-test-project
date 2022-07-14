@@ -1,4 +1,4 @@
-package com.example.john_keels_it_project.views;
+package com.example.john_keels_it_project.views.fragments;
 
 import android.os.Bundle;
 
@@ -20,16 +20,21 @@ import com.example.john_keels_it_project.model.StudentModel;
 import java.util.ArrayList;
 import java.util.List;
 
+// This call is extended from Fragment class once the user click
+// on the "Get Students" button this one will return by view pager adapter.
+// Once the user click on it again previous created object will return. Just like
+// the Singleton pattern.
 public class StudentFragment extends Fragment {
+
     private DBHandler dbHandler;
-    List<StudentModel> students = new ArrayList<StudentModel>();
+    List<StudentModel> students = new ArrayList<>();
     View rootView;
+
     public StudentFragment() {
     }
 
     public static StudentFragment newInstance() {
-        StudentFragment fragment = new StudentFragment();
-        return fragment;
+        return new StudentFragment();
     }
 
     @Override
@@ -40,8 +45,8 @@ public class StudentFragment extends Fragment {
     @Override
     public void onResume() {
         students = dbHandler.getStudents();
-        // Add the following lines to create RecyclerView
-        if(rootView!=null){
+        // The following lines to create RecyclerView
+        if (rootView != null) {
             RecyclerView recyclerView = rootView.findViewById(R.id.recyclerViewId);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
@@ -54,15 +59,7 @@ public class StudentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         dbHandler = new DBHandler(getContext());
-        students = dbHandler.getStudents();
         rootView = inflater.inflate(R.layout.fragment_student, container, false);
-
-        // Add the following lines to create RecyclerView
-        RecyclerView recyclerView = rootView.findViewById(R.id.recyclerViewId);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
-        recyclerView.setAdapter(new StudentAdapter(students));
-
         return rootView;
     }
 

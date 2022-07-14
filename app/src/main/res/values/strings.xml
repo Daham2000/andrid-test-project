@@ -11,4 +11,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_student_id">Enter Student ID</string>
+    <string name="enter_student_name">Enter Student Name</string>
+    <string name="enter_student_age">Enter Student Age</string>
+    <string name="enter_course_name">Enter Course Name</string>
+    <string name="add_student">Add Student</string>
+    <string name="send">Send</string>
 </resources>
