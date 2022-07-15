@@ -19,10 +19,10 @@ import com.example.john_keels_it_project.model.StudentModel;
 
 import org.jetbrains.annotations.NotNull;
 
-//This call is extended from Fragment class once the user click
-//on the "Add Student" button this one will return by view pager adapter.
-//Once the user click on it again previous created object will return. Just like
-//the Singleton pattern.
+// This call is extended from Fragment class once the user click
+// on the "Add Student" button this one will return by view pager adapter.
+// Once the user click on it again previous created object will return. Just like
+// the Singleton pattern.
 public class AddStudentFragment extends Fragment {
 
     public AddStudentFragment() {

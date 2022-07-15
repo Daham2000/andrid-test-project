@@ -28,7 +28,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.Recycler
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
         return new RecyclerViewHolder(view);
     }

@@ -29,6 +29,7 @@ public class StudentCtrl {
         return studentCtrl;
     }
 
+    // Get all students api call
     public List<StudentModel> getStudentList() {
         APIService apiService = RetroInstance.getRetroClient().create(APIService.class);
         Call<List<StudentModel>> call = apiService.getStudentList();
@@ -46,6 +47,7 @@ public class StudentCtrl {
         return studentList;
     }
 
+    // Add student api call
     public void addStudent(StudentModel studentModel) {
         APIService apiService = RetroInstance.getRetroClient().create(APIService.class);
         Call<StudentModel> call = apiService.addStudent(studentModel);
@@ -61,6 +63,7 @@ public class StudentCtrl {
         });
     }
 
+    // Send all student object as a list to api
     public void addAllStudent(List<StudentModel> studentModel) {
         APIService apiService = RetroInstance.getRetroClient().create(APIService.class);
         Call<StudentModel> call = apiService.addStudentList(studentModel);
